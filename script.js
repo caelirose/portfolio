@@ -52,4 +52,20 @@
 
   window.addEventListener('scroll', updateLineFill, { passive: true });
   updateLineFill();
+
+  /* ---------- Intersection Observer for project cards reveal ---------- */
+  const projectCards = document.querySelectorAll('.project-card');
+  if (projectCards.length) {
+    const projectObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    projectCards.forEach((card) => projectObserver.observe(card));
+  }
 })();
