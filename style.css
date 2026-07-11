@@ -846,10 +846,13 @@ nav { font-size: 12px; }
 .project-card {
     position: relative;
     width: 300px;
-    cursor: none;
+    cursor: pointer;
     opacity: 1;
     transform: translateY(0);
     transition: opacity .7s ease, transform .7s cubic-bezier(.25, .46, .45, .94);
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .project-card.is-visible { opacity: 1; transform: translateY(0); }
 .project-card[data-proj="1"] { transition-delay: .12s; }
