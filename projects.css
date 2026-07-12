@@ -467,7 +467,7 @@
 
 @media (max-width: 768px) {
     .pj-header { padding: 100px 24px 48px; }
-    .pj-title { font-size: clamp(56px, 14vw, 100px); }
+    .pj-title { font-size: clamp(52px, 13vw, 96px); letter-spacing: -2px; }
     .pj-main { padding: 60px 24px 40px; }
     .pj-entry { grid-template-columns: 1fr; gap: 32px; }
     .pj-entry-aside { flex-direction: row; flex-wrap: wrap; gap: 20px 32px; }
@@ -476,4 +476,19 @@
     .pj-highlight-item { border-right: none; border-bottom: 1px solid rgba(15, 23, 42, 0.08); }
     .pj-highlight-item:last-child { border-bottom: none; }
     .pj-footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .pj-header { padding: 90px 20px 40px; gap: 32px; }
+    .pj-title { font-size: clamp(42px, 12vw, 72px); letter-spacing: -2px; }
+    .pj-subtitle { font-size: 13px; }
+    .pj-back-link { margin-bottom: 32px; }
+    .pj-main { padding: 48px 20px 32px; }
+    .pj-divider { margin: 56px 0; }
+    .pj-entry { gap: 24px; }
+    .pj-name { font-size: clamp(24px, 6vw, 36px); }
+    .pj-description { font-size: 14px; }
+    .pj-highlight-val { font-size: 28px; }
+    .pj-footer { padding: 20px; }
+    .pj-footer-copy { font-size: 11px; }
 }

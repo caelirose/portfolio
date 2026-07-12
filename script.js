@@ -17,6 +17,29 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  /* ── Hamburger menu ── */
+  const hamburger = document.getElementById('hamburger');
+  const navMenu   = document.getElementById('nav-menu');
+  function closeMenu() {
+    if (!hamburger || !navMenu) return;
+    hamburger.classList.remove('is-open');
+    navMenu.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('is-open');
+      navMenu.classList.toggle('is-open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    // Close menu when a nav link is clicked
+    navMenu.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
+
   /* ── Universal reveal helper ── */
   function makeObserver(selector, threshold) {
     const els = document.querySelectorAll(selector);
