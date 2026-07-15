@@ -21,12 +21,12 @@
 ══════════════════════════════════════════ */
 .pj-header {
     position: relative;
-    min-height: 100vh;
+    min-height: 70vh;
     background: #0f172a;
     display: grid;
     grid-template-columns: 1fr 300px;
     align-items: end;
-    padding: 140px 80px 80px;
+    padding: 100px 80px 60px;
     overflow: hidden;
     gap: 48px;
 }
@@ -75,7 +75,7 @@
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     text-transform: uppercase;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
     transition: color .25s ease;
 }
 .pj-back-link:hover { color: rgba(255,255,255,0.8); }
@@ -150,7 +150,7 @@
 .pj-main {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 100px 80px 80px;
+    padding: 60px 80px 60px;
 }
 
 /* ── Divider ── */
@@ -158,7 +158,7 @@
     width: 100%;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(15, 23, 42, 0.12) 30%, rgba(15, 23, 42, 0.12) 70%, transparent);
-    margin: 80px 0;
+    margin: 50px 0;
 }
 
 /* ══════════════════════════════════════════
@@ -427,7 +427,7 @@
 ══════════════════════════════════════════ */
 .pj-footer {
     border-top: 1px solid rgba(15, 23, 42, 0.1);
-    padding: 40px 80px;
+    padding: 24px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
